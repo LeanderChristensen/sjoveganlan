@@ -1,0 +1,577 @@
+
+
+<!DOCTYPE html>
+<html>
+<head>
+<!--
+Code written by Leander Christensen with great inspiration from the previous LAN-party site (Wayback Machine)
+Website made with HTML, CSS, PHP, SQL and Javascript
+-->
+<meta charset="UTF-8">
+<title>Sjøvegan LAN</title>
+<script type='text/javascript' src="libraries/jquery.js"></script>
+<script type='text/javascript' src="libraries/bootstrap.js"></script>
+<link rel="stylesheet" href="libraries/bootstrap.css">
+<link rel="stylesheet" type="text/css" href="libraries/leander.css"></script>
+<link rel="icon" href="/images/logoSmall.png">
+<script src="js/script.js"></script>
+<link rel="stylesheet" type="text/css" href="css/style_en.css">
+<link rel="stylesheet" type="text/css" href="css/style.css">
+<script language="javascript" type="text/javascript" src="js/seatmap_en.js"></script>
+<link href="libraries/roboto.css" rel="stylesheet">
+
+<script>
+$( document ).ready(function() {
+    //$('#seat01').attr('style', 'background-color: #cc0000 !important');
+    $('#seat1').attr('style', 'background-color: #cc0000 !important');$('#seat1').attr('title', 'Olaug Pedersen');$('#seat2').attr('style', 'background-color: #cc0000 !important');$('#seat2').attr('title', 'Oskar Sørfosbog');$('#seat3').attr('style', 'background-color: #cc0000 !important');$('#seat3').attr('title', 'Lars Sørfosbog');$('#seat4').attr('style', 'background-color: #cc0000 !important');$('#seat4').attr('title', 'Christel Ryeng');$('#seat5').attr('style', 'background-color: #cc0000 !important');$('#seat5').attr('title', 'Daniel-Andrè Pettersen');$('#seat6').attr('style', 'background-color: #cc0000 !important');$('#seat6').attr('title', 'Sigurd Antonsen Engen');$('#seat7').attr('style', 'background-color: #cc0000 !important');$('#seat7').attr('title', 'ole elias');$('#seat8').attr('style', 'background-color: #cc0000 !important');$('#seat8').attr('title', 'Anton Gjertsen');$('#seat9').attr('style', 'background-color: #cc0000 !important');$('#seat9').attr('title', 'Petter pettersen');$('#seat10').attr('style', 'background-color: #cc0000 !important');$('#seat10').attr('title', 'Morgan trøen moen');$('#seat11').attr('style', 'background-color: #cc0000 !important');$('#seat11').attr('title', 'Ruben johnsen');$('#seat12').attr('style', 'background-color: #2eb82e !important');$('#seat12').attr('title', 'Available!');$('#seat13').attr('style', 'background-color: #2eb82e !important');$('#seat13').attr('title', 'Available!');$('#seat14').attr('style', 'background-color: #cc0000 !important');$('#seat14').attr('title', 'Magnus strømsør');$('#seat15').attr('style', 'background-color: #cc0000 !important');$('#seat15').attr('title', 'Peter Hasvold');$('#seat16').attr('style', 'background-color: #cc0000 !important');$('#seat16').attr('title', 'Syvert Sælevik');$('#seat17').attr('style', 'background-color: #cc0000 !important');$('#seat17').attr('title', 'Sandra Walle');$('#seat18').attr('style', 'background-color: #cc0000 !important');$('#seat18').attr('title', 'Sander Roll Bruvoll');$('#seat19').attr('style', 'background-color: #cc0000 !important');$('#seat19').attr('title', 'Tobias Myrmel Antonsen');$('#seat20').attr('style', 'background-color: #2eb82e !important');$('#seat20').attr('title', 'Available!');$('#seat21').attr('style', 'background-color: #cc0000 !important');$('#seat21').attr('title', 'Sindre Woll');$('#seat22').attr('style', 'background-color: #cc0000 !important');$('#seat22').attr('title', 'Robin Wang');$('#seat23').attr('style', 'background-color: #cc0000 !important');$('#seat23').attr('title', 'Sigve Vassås');$('#seat24').attr('style', 'background-color: #cc0000 !important');$('#seat24').attr('title', 'Rosanne Isabell Svendsen');$('#seat25').attr('style', 'background-color: #cc0000 !important');$('#seat25').attr('title', 'Odin Johan fors Jøtulhaug');$('#seat26').attr('style', 'background-color: #cc0000 !important');$('#seat26').attr('title', 'Erik Furset Jensen');$('#seat27').attr('style', 'background-color: #cc0000 !important');$('#seat27').attr('title', 'Steffen Planterhaug');$('#seat28').attr('style', 'background-color: #cc0000 !important');$('#seat28').attr('title', 'Sander Istad Larsen');$('#seat29').attr('style', 'background-color: #cc0000 !important');$('#seat29').attr('title', 'Sander Åsheim');$('#seat30').attr('style', 'background-color: #cc0000 !important');$('#seat30').attr('title', 'Jan Henrik Karlsen');$('#seat31').attr('style', 'background-color: #cc0000 !important');$('#seat31').attr('title', 'thomas enoksen dørum');$('#seat32').attr('style', 'background-color: #cc0000 !important');$('#seat32').attr('title', 'Sondre roall Tunheim');$('#seat33').attr('style', 'background-color: #cc0000 !important');$('#seat33').attr('title', 'Runar Nyland Pedersen');$('#seat34').attr('style', 'background-color: #cc0000 !important');$('#seat34').attr('title', 'Simen kj');$('#seat35').attr('style', 'background-color: #cc0000 !important');$('#seat35').attr('title', 'Dan Hamnli');$('#seat36').attr('style', 'background-color: #cc0000 !important');$('#seat36').attr('title', 'Christian høiem');$('#seat37').attr('style', 'background-color: #cc0000 !important');$('#seat37').attr('title', 'Mikal Haugseth');$('#seat38').attr('style', 'background-color: #cc0000 !important');$('#seat38').attr('title', 'Tobias Christensen');$('#seat39').attr('style', 'background-color: #2eb82e !important');$('#seat39').attr('title', 'Available!');$('#seat40').attr('style', 'background-color: #cc0000 !important');$('#seat40').attr('title', 'Thor oskar');$('#seat41').attr('style', 'background-color: #2eb82e !important');$('#seat41').attr('title', 'Available!');$('#seat42').attr('style', 'background-color: #cc0000 !important');$('#seat42').attr('title', 'Torgrim Martin Paulsen');$('#seat43').attr('style', 'background-color: #cc0000 !important');$('#seat43').attr('title', 'ola');$('#seat44').attr('style', 'background-color: #cc0000 !important');$('#seat44').attr('title', 'Ivar Fredheim');$('#seat45').attr('style', 'background-color: #cc0000 !important');$('#seat45').attr('title', 'Marius Sagerup Martinussen');$('#seat46').attr('style', 'background-color: #cc0000 !important');$('#seat46').attr('title', 'Torstein Paulsen');$('#seat47').attr('style', 'background-color: #cc0000 !important');$('#seat47').attr('title', 'Markus Rindstad');$('#seat48').attr('style', 'background-color: #cc0000 !important');$('#seat48').attr('title', 'Henning Berg Frantzen');$('#seat49').attr('style', 'background-color: #cc0000 !important');$('#seat49').attr('title', 'Sebastian Hellum');$('#seat50').attr('style', 'background-color: #cc0000 !important');$('#seat50').attr('title', 'Jonas Fredriksen Løkse');$('#seat51').attr('style', 'background-color: #cc0000 !important');$('#seat51').attr('title', 'Kai-André Nyland Pedersen');$('#seat52').attr('style', 'background-color: #cc0000 !important');$('#seat52').attr('title', 'Sondre Pedersen');$('#seat53').attr('style', 'background-color: #cc0000 !important');$('#seat53').attr('title', 'Sigurd Sagerup Enbusk');$('#seat54').attr('style', 'background-color: #cc0000 !important');$('#seat54').attr('title', 'Niklas Andre Gjertsen');$('#seat55').attr('style', 'background-color: #cc0000 !important');$('#seat55').attr('title', 'Mathias Andre olsen');$('#seat56').attr('style', 'background-color: #2eb82e !important');$('#seat56').attr('title', 'Available!');$('#seat57').attr('style', 'background-color: #2eb82e !important');$('#seat57').attr('title', 'Available!');$('#seat58').attr('style', 'background-color: #cc0000 !important');$('#seat58').attr('title', 'Jørgen Sørensen');$('#seat59').attr('style', 'background-color: #cc0000 !important');$('#seat59').attr('title', 'Eirik Løvli');$('#seat60').attr('style', 'background-color: #2eb82e !important');$('#seat60').attr('title', 'Available!');$('#seat61').attr('style', 'background-color: #cc0000 !important');$('#seat61').attr('title', 'Jim Mulstad');$('#seat62').attr('style', 'background-color: #2eb82e !important');$('#seat62').attr('title', 'Available!');$('#seat63').attr('style', 'background-color: #cc0000 !important');$('#seat63').attr('title', 'Torgrim Bratsberg');$('#seat64').attr('style', 'background-color: #cc0000 !important');$('#seat64').attr('title', 'Anders Nordvik');$('#seat65').attr('style', 'background-color: #2eb82e !important');$('#seat65').attr('title', 'Available!');$('#seat66').attr('style', 'background-color: #cc0000 !important');$('#seat66').attr('title', 'Kristian');$('#seat67').attr('style', 'background-color: #cc0000 !important');$('#seat67').attr('title', 'Julian');$('#seat68').attr('style', 'background-color: #2eb82e !important');$('#seat68').attr('title', 'Available!');$('#seat69').attr('style', 'background-color: #2eb82e !important');$('#seat69').attr('title', 'Available!');$('#seat70').attr('style', 'background-color: #2eb82e !important');$('#seat70').attr('title', 'Available!');$('#seat71').attr('style', 'background-color: #cc0000 !important');$('#seat71').attr('title', 'Armin Dedic');$('#seat72').attr('style', 'background-color: #cc0000 !important');$('#seat72').attr('title', 'Martin Myrvoll');$('#seat73').attr('style', 'background-color: #cc0000 !important');$('#seat73').attr('title', 'Daniel Skoglund');$('#seat74').attr('style', 'background-color: #cc0000 !important');$('#seat74').attr('title', 'Kristoffer Harlonen');$('#seat75').attr('style', 'background-color: #cc0000 !important');$('#seat75').attr('title', 'Kristine Hauan Berg');$('#seat76').attr('style', 'background-color: #cc0000 !important');$('#seat76').attr('title', 'Ine Sørensen');$('#seat77').attr('style', 'background-color: #cc0000 !important');$('#seat77').attr('title', 'Runar Folke-Olsen');$('#seat78').attr('style', 'background-color: #cc0000 !important');$('#seat78').attr('title', 'Patrik Benjaminsen');$('#seat79').attr('style', 'background-color: #cc0000 !important');$('#seat79').attr('title', 'Sindre Enoksen');$('#seat80').attr('style', 'background-color: #2eb82e !important');$('#seat80').attr('title', 'Available!');$('#seat81').attr('style', 'background-color: #ff9900 !important');$('#seat81').attr('title', 'Sivert Haugseth');$('#seat82').attr('style', 'background-color: #ff9900 !important');$('#seat82').attr('title', 'Benjamin Søvik');$('#seat83').attr('style', 'background-color: #ff9900 !important');$('#seat83').attr('title', 'Farhan Hazarbuz');$('#seat84').attr('style', 'background-color: #ff9900 !important');$('#seat84').attr('title', 'Trond Ivar Trondsen Mikkelborg');$('#seat85').attr('style', 'background-color: #ff9900 !important');$('#seat85').attr('title', 'Nihkus Nutti');$('#seat86').attr('style', 'background-color: #ff9900 !important');$('#seat86').attr('title', 'Kristian Skavehuge Gundersen');$('#seat87').attr('style', 'background-color: #ff9900 !important');$('#seat87').attr('title', 'Simon Walle Sjøttem');$('#seat88').attr('style', 'background-color: #ff9900 !important');$('#seat88').attr('title', 'Available!');$('#seat89').attr('style', 'background-color: #ff9900 !important');$('#seat89').attr('title', 'Jonas Jørgensen');$('#seat90').attr('style', 'background-color: #ff9900 !important');$('#seat90').attr('title', 'Lillian Enoksen');$('#seat91').attr('style', 'background-color: #ff9900 !important');$('#seat91').attr('title', 'Raymond Grønmo');$('#seat92').attr('style', 'background-color: #ff9900 !important');$('#seat92').attr('title', 'Leander Christensen');$('#seat93').attr('style', 'background-color: #ff9900 !important');$('#seat93').attr('title', 'Johan Fløtten');$('#seat94').attr('style', 'background-color: #ff9900 !important');$('#seat94').attr('title', 'Tommy Wang');$('#seat95').attr('style', 'background-color: #ff9900 !important');$('#seat95').attr('title', 'Available!');$('#seat96').attr('style', 'background-color: #ff9900 !important');$('#seat96').attr('title', 'Available!');
+    $('[data-tooltip="tooltip"]').tooltip();
+
+    //$('#seat85').attr('data-placement', 'top');
+    //$('#seat85').tooltip('show');
+});
+</script>
+<script>
+
+</script>
+
+<style>
+
+</style>
+
+</head>
+<body>
+<div id="wrapper">
+  <nav class="navbar-default navbar-inverse" style="position:relative;">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a style="cursor:pointer;" class="active navbar-brand" id="title" onclick="newPage(&quot;index0&quot;)"><img id="tittel" src="images/logoSmall.png" alt="Sjøvegan LAN 2017"></a>
+      </div>
+      <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav">
+        <li class="nav-item"><a onclick="newPage(&quot;info0&quot;)" style="cursor:pointer;">Information</a></li>
+        <li class="nav-item"><a onclick="newPage(&quot;regler0&quot;)" style="cursor:pointer;">Rules</a></li>
+        <li class="nav-item"><a onclick="newPage(&quot;compo0&quot;)" style="cursor:pointer;">Compo</a></li>
+        <li class="nav-item"><a onclick="newPage(&quot;crew0&quot;)" style="cursor:pointer;">Crew</a></li>
+        <li class="nav-item"><a onclick="newPage(&quot;kontaktoss0&quot;)" style="cursor:pointer;">Support</a></li>
+        <li class="nav-item"><a onclick="newPage(&quot;seatmap0&quot;)" style="cursor:pointer;">Seatmap</a></li>
+                  <li class="nav-item" id="right"><a onclick="newPage(&quot;login0&quot;)">Sign in</a></li>
+          <li class="nav-item"><a onclick="newPage(&quot;register0&quot;)">Sign up</a></li>
+              </ul>
+    </div>
+    </div>
+  </nav>
+<div class="container main" id="main">
+<div id="index0">
+  <noscript>
+  <h1>Du har ikke Javascript i nettleseren din så denne nettsiden fungerer desverre ikke for deg ...</h1>
+</noscript>
+<a href="https://www.facebook.com/sjoveganlan/" target="_blank"><img src="images/logo.png" alt="Sjøvegan LAN Logo" id="logo"></a>
+<a href="index.html" id="norwegian"><img src="images/norway.png" alt="Norwegian flag" id="norway">Click here for the Norwegian version of the site<img src="images/norway.png" alt="Norwegian flag" id="norway2"></a>
+<h1 id="SPONSORER">Sponsorer:</h1>
+<table style="width:100%;border:0 !important;">
+<tr class="sponss" style="border:0 !important;">
+<td style="border:0 !important;"><a class="ad" href="https://facebook.com/Extra-Sjøvegan-538212483011321/" target="_blank"><img src="images/extra.PNG" class="sponsor ad" id="extra"></a></td>
+<td style="border:0 !important;"><a class="ad" href="https://multicom.no/" target="_blank"><img src="images/multicom.png" class="sponsor ad" style="margin-bottom: 50px;"></a></td>
+</tr>
+<tr class="sponss" style="border:0 !important;">
+<td style="border:0 !important;"><a class="ad" href="http://millionfisken.com/" target="_blank"><img src="images/millfish.png" class="sponsor ad" style="height: 125px;margin-left: 2.5%;"></a></td>
+<td style="border:0 !important;"><a class="ad" href="http://narvesen.no/" target="_blank"><img src="images/narvesen.png" class="sponsor ad" style="height: 130px;"></a></td>
+</tr>
+<tr class="sponss" style="border:0 !important;">
+<td style="border:0 !important;"><a class="ad" href="https://www.facebook.com/Mix-Sj%C3%B8vegan-130702183804676/" target="_blank"><img src="images/mix.png" class="sponsor ad" style="height: 150px;width: 300px;"></a></td>
+<td style="border:0 !important;"><a class="ad" href="https://www.facebook.com/Salong-Lilleng-As-294632937411160/" target="_blank"><img src="images/lilleng.png" class="sponsor ad" style="width: 500px; height: 200px;"></a></td>
+</tr>
+<tr>
+<td style="border:0 !important;"><a class="ad" href="https://www.felleskjopet.no/" target="_blank"><img src="images/felleskjopet.png" class="sponsor ad" style="margin-left: 5%;margin-bottom: 60px;height: 75px;width: 400px;"></a></td>
+</tr>
+</table>
+</div>
+<div id="info0">
+  <p id="INFORMATION"><strong>INFORMASJON</strong></p>
+<p><b>What:</b><br>SjøveganLAN is an annual LAN party hosted by VG2 IKT students at Sjøvegan Vidregående Skole.</p>
+<p><b>When:</b><br>31.March - 2.April 2017<br>Starts 18:00 Friday<br>Ends 12:00 Sunday</p>
+<p><b>Where:</b><br>SjøveganLAN will be held at Sjøvegan Vidregående Skole<br>Address: Helsesenterveien 1, 9350 Sjøvegan</p>
+<p><iframe width="600" height="450" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1438.0515072881713!2d17.845547200000006!3d68.873374!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x45db0cd38bcac893%3A0xa5c9c9981acc1470!2sHelsesenterveien+1%2C+9350+Sj%C3%B8vegan%2C+Norge!5e0!3m2!1sno!2sno!4v1416226841161" frameborder="0"></iframe></p>
+<p><strong>Age:</strong> 8. Klasse+</p>
+<p><strong>Price:</strong> 300 NOK</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;100 NOK if you are a visitor for the whole weekend</p>
+<p><strong>Table size:</strong></p>
+<p>Every gamer get a table with the size of 65 x 80 cm</p>
+<p><strong>Contact information:</strong></p>
+<p style="margin-bottom:20px;">
+Facebookpage: <a href="https://www.facebook.com/sjoveganlan/" target="_blank">https://www.facebook.com/sjoveganlan/</a>
+<br>
+Email: <a href="mailto:sjoveganlan2017@gmail.com">sjoveganlan2017@gmail.com</a>
+<br>
+Website developer: <a href="mailto:email@leanderchristensen.com">email@leanderchristensen.com</a>
+</p>
+</div>
+<div id="regler0">
+  <p id="REGLER"><strong>RULES</strong></p>
+<ul>
+<li>No drugs.</li>
+<li>No extra power hungry things (electric kettles, speakers ...)</li>
+<li>Only use your assigned space (If you want to use more than that, you have to speak with the person sitting next to you)</li>
+<li>No illegal activities (Norwegian laws)</li>
+<li>You are responsible for everything you bring</li>
+<li>Gamers and visitors are not allowed on the kitchen</li>
+<li>All school rules must be followed</li>
+<li>No tape or "strips", the crew have this</li>
+<li>Max one power outlet per gamer</li>
+<li>The crew can change and remove rules</li>
+<li>The crew cannot win any prizes</li>
+</ul>
+<p id="PAKKELISTE"><strong>STUFF YOU SHOULD BRING</strong></p>
+<ul>
+<li>Valid ID (ID with picture; driver licence, passport, school card, credit card)</li>
+<li>Your computer</li>
+<li>A 5 meter long ethernet cable</li>
+<li>Power cables, monitor cable</li>
+<li>Keyboard, mouse, mousepad, headphones</li>
+<li>Clothes</li>
+<li>Money! Important!</li>
+<li>Sleeping bag, pillow</li>
+</ul>
+<p style="margin-bottom: 50px;"></p>
+</div>
+<div id="compo0">
+  <img src="images/csgo.png" id="csgo">
+<p class="center" style="margin-top:30px;">5v5</p>
+<p class="center">1st place - 5,000 NOK</p>
+<p class="center">2nd place - 2,500 NOK</p>
+<p class="center">3rd place - THE MIX PRICE: 2 pizza and 5 soda at MIX</p>
+<img src="images/lol.png" id="lol">
+<p class="center" style="margin-top:30px;">5v5</p>
+<p class="center">1st place - 2,500 NOK</p>
+<p class="center">2nd place - 750 NOK</p>
+<p class="center">3rd place - 2 pizza and 5 soda</p>
+<img src="images/hs.png" id="hs">
+<p class="center" style="margin-top:30px;">1v1</p>
+<p class="center" style="margin-bottom:30px;">1st place - Millionfisken ticket</p>
+</div>
+<div id="crew0">
+  <p style="font-size:40px;padding-top:31px;padding-bottom:15px;text-align:center;color:black;">CREW</p>
+<hr>
+<div style="height:225px;" id="sadBoy">
+    <img src="userImg/1.gif" style="width: 200px;height: 200px;display: block;float: left;">
+  <span class="leftNavn ">NAVN    </span><span class="leftNavn2 ">Leander Christensen</span><br>
+    <span class="leftMail ">EMAIL   </span><span class="leftMail2 ">email@leanderchristensen.com</span><br>
+    <span class="leftCity ">LOCATION  </span><span class="leftCity2 ">/home/</span><br>
+    <span class="leftAnsv ">ROLE  </span><span class="leftAnsv2 ">Nettside</span><br>
+  </div>
+<hr>
+<div style="width:100%; height:225px;">
+    <img src="userImg/2.png" style="border-radius:;width: 200px;height: 200px;margin-left: auto;margin-right: auto;display: block;float: right;margin-left: 50px;">
+  <span class="rightNavn">NAVN    </span><span class="rightNavn2">Raymond Grønmo</span><br>
+    <span class="rightNick">NICKNAME</span><span class="rightNick2">Rayya</span><br>
+    <span class="rightMail">EMAIL   </span><span class="rightMail2">raymond@leanderchristensen.com</span><br>
+    <span class="rightCity">LOCATION  </span><span class="rightCity2">Tromsø</span><br>
+    <span class="rightAnsv">ROLE  </span><span class="rightAnsv2">Nettside (Medhjelper)</span><br>
+  </div>
+<hr>
+<div style="height:225px;">
+    <img src="userImg/3.jpg" style="width: 200px;height: 200px;display: block;float: left;">
+  <span class="leftNavn ">NAVN    </span><span class="leftNavn2 ">Johan Fløtten</span><br>
+    <span class="leftNick ">NICKNAME</span><span class="leftNick2 ">Fløtepus</span><br>
+    <span class="leftMail ">EMAIL   </span><span class="leftMail2 ">johanflotten@hotmail.com</span><br>
+    <span class="leftCity ">LOCATION  </span><span class="leftCity2 ">Salangen</span><br>
+    <span class="leftAnsv ">ROLE  </span><span class="leftAnsv2 ">Alt</span><br>
+  </div>
+<hr>
+<div style="width:100%; height:225px;">
+    <img src="userImg/4.gif" style="border-radius:;width: 200px;height: 200px;margin-left: auto;margin-right: auto;display: block;float: right;margin-left: 50px;">
+  <span class="rightNavn">NAVN    </span><span class="rightNavn2">Emil Qvist</span><br>
+    <span class="rightNick">NICKNAME</span><span class="rightNick2">Encoderr</span><br>
+    <span class="rightMail">EMAIL   </span><span class="rightMail2">aliencore99@gmail.com</span><br>
+    <span class="rightCity">LOCATION  </span><span class="rightCity2">Uzbekistan</span><br>
+    <span class="rightAnsv">ROLE  </span><span class="rightAnsv2">Teknisk medarbeider</span><br>
+  </div>
+<hr>
+<div style="height:225px;">
+    <img src="userImg/5.png" style="width: 200px;height: 200px;display: block;float: left;">
+  <span class="leftNavn ">NAVN    </span><span class="leftNavn2 ">Jonas Jørgensen</span><br>
+    <span class="leftNick ">NICKNAME</span><span class="leftNick2 ">Owonowonga</span><br>
+    <span class="leftMail ">EMAIL   </span><span class="leftMail2 ">jonasjorge@live.no</span><br>
+    <span class="leftCity ">LOCATION  </span><span class="leftCity2 ">Sjøvegan</span><br>
+    <span class="leftAnsv ">ROLE  </span><span class="leftAnsv2 ">Dagligleder</span><br>
+  </div>
+<hr>
+<div style="width:100%; height:225px;">
+    <img src="userImg/6.png" style="border-radius:;width: 200px;height: 200px;margin-left: auto;margin-right: auto;display: block;float: right;margin-left: 50px;">
+  <span class="rightNavn">NAVN    </span><span class="rightNavn2">Sivert Haugseth</span><br>
+    <span class="rightNick">NICKNAME</span><span class="rightNick2">Mr-Saivert</span><br>
+    <span class="rightMail">EMAIL   </span><span class="rightMail2">haugseth.sivert@gmail.com</span><br>
+    <span class="rightCity">LOCATION  </span><span class="rightCity2">Sjøvegan</span><br>
+  </div>
+<hr>
+<div style="height:225px;">
+    <img src="userImg/7.png" style="width: 200px;height: 200px;display: block;float: left;">
+  <span class="leftNavn ">NAVN    </span><span class="leftNavn2 ">Tommy Wang</span><br>
+    <span class="leftNick ">NICKNAME</span><span class="leftNick2 ">Minegamers</span><br>
+    <span class="leftMail ">EMAIL   </span><span class="leftMail2 ">Ingennavnerledig@gmail.com</span><br>
+    <span class="leftCity ">LOCATION  </span><span class="leftCity2 ">Løksebotn</span><br>
+  </div>
+<hr>
+<div style="width:100%; height:225px;">
+    <img src="userImg/8.png" style="border-radius:;width: 200px;height: 200px;margin-left: auto;margin-right: auto;display: block;float: right;margin-left: 50px;">
+  <span class="rightNavn">NAVN    </span><span class="rightNavn2">Benjamin Søvik</span><br>
+    <span class="rightMail">EMAIL   </span><span class="rightMail2">benjameenn@gmail.com</span><br>
+    <span class="rightCity">LOCATION  </span><span class="rightCity2">Harstad</span><br>
+  </div>
+<hr>
+<div style="height:225px;">
+    <img src="userImg/0.png" style="width: 200px;height: 200px;display: block;float: left;">
+  <span class="leftNavn ">NAVN    </span><span class="leftNavn2 ">Nihkus Nutti</span><br>
+    <span class="leftNick ">NICKNAME</span><span class="leftNick2 ">Nickname</span><br>
+    <span class="leftMail ">EMAIL   </span><span class="leftMail2 ">nihkus98@hotmail.com</span><br>
+    <span class="leftCity ">LOCATION  </span><span class="leftCity2 ">Lavangen</span><br>
+  </div>
+<hr>
+<div style="width:100%; height:225px;">
+
+    <img src="userImg/0.png" style="border-radius:;width: 200px;height: 200px;margin-left: auto;margin-right: auto;display: block;float: right;margin-left: 50px;">
+  <span class="rightNavn">NAVN    </span><span class="rightNavn2">Johan Walør Sagerup</span><br>
+    <span class="rightMail">EMAIL   </span><span class="rightMail2">johan_sagerup@hotmail.com</span><br>
+    <span class="rightCity">LOCATION  </span><span class="rightCity2">Sjøvegan</span><br>
+  </div>
+<hr>
+<div style="height:225px;">
+
+    <img src="userImg/14.jpg" style="width: 200px;height: 200px;display: block;float: left;">
+  <span class="leftNavn ">NAVN    </span><span class="leftNavn2 ">Simon Walle Sjøttem</span><br>
+    <span class="leftNick ">NICKNAME</span><span class="leftNick2 ">DankestDank</span><br>
+    <span class="leftMail ">EMAIL   </span><span class="leftMail2 ">simonsjottem@gmail.com</span><br>
+    <span class="leftCity ">LOCATION  </span><span class="leftCity2 ">Sjøvegan</span><br>
+    <span class="leftAnsv ">ROLE  </span><span class="leftAnsv2 ">Teknisk Medarbeider</span><br>
+  </div>
+<hr>
+<div style="width:100%; height:225px;">
+
+    <img src="userImg/16.jpg" style="border-radius:;width: 200px;height: 200px;margin-left: auto;margin-right: auto;display: block;float: right;margin-left: 50px;">
+  <span class="rightNavn">NAVN    </span><span class="rightNavn2">Lillian Enoksen</span><br>
+    <span class="rightMail">EMAIL   </span><span class="rightMail2">e-lillian@hotmail.com</span><br>
+    <span class="rightCity">LOCATION  </span><span class="rightCity2">Engenes</span><br>
+  </div>
+<hr>
+<div style="height:225px;">
+
+    <img src="userImg/17.png" style="width: 200px;height: 200px;display: block;float: left;">
+  <span class="leftNavn ">NAVN    </span><span class="leftNavn2 ">Trond Ivar Trondsen Mikkelborg</span><br>
+    <span class="leftNick ">NICKNAME</span><span class="leftNick2 ">Litago</span><br>
+    <span class="leftMail ">EMAIL   </span><span class="leftMail2 ">trivmock@hotmail.com</span><br>
+    <span class="leftCity ">LOCATION  </span><span class="leftCity2 ">Sjøvegan</span><br>
+  </div>
+<hr>
+<div style="width:100%; height:225px;">
+    <img src="userImg/0.png" style="border-radius:;width: 200px;height: 200px;margin-left: auto;margin-right: auto;display: block;float: right;margin-left: 50px;">
+  <span class="rightNavn">NAVN    </span><span class="rightNavn2">Farhan Hazarbuz</span><br>
+    <span class="rightMail">EMAIL   </span><span class="rightMail2">faisalhazarbuz123@yahoo.com</span><br>
+    <span class="rightCity">LOCATION  </span><span class="rightCity2">Sjøvegan</span><br>
+  </div>
+<hr>
+<div style="height:225px;">
+
+    <img src="userImg/123.jpg" style="width: 200px;height: 200px;display: block;float: left;">
+  <span class="leftNavn ">NAVN    </span><span class="leftNavn2 ">Kristian Skavehuge Gundersen</span><br>
+    <span class="leftNick ">NICKNAME</span><span class="leftNick2 ">Drkarfus</span><br>
+    <span class="leftCity ">LOCATION  </span><span class="leftCity2 ">Sørreisa</span><br>
+  </div>
+</div>
+<div id="kontaktoss0">
+  <h1 id="KONTAKTOSS"><strong>SUPPORT</strong></h1>
+<p>
+Facebookpage: <a href="https://www.facebook.com/sjoveganlan/" target="_blank">https://www.facebook.com/sjoveganlan/</a>
+<br>
+Email: <a href="mailto:sjoveganlan2017@gmail.com">sjoveganlan2017@gmail.com</a>
+<br>
+Website developer: <a href="mailto:email@leanderchristensen.com">email@leanderchristensen.com</a>
+</p>
+<p style="margin-bottom: 500px;"></p>
+</div>
+<div id="seatmap0">
+  <script type="text/javascript">
+$( function() {
+  $( '#seat01' ).tooltip({
+    //track: true
+  });
+} );
+</script>
+<style>
+table, th, td {
+  border: 1px solid black;
+  text-align: center;
+}
+</style>
+<div id="seatmap">
+<p id="kantine">Kantine</p>
+<table style="allign:center;"><tr><td id="kiosk">Shop</td></tr></table>
+<table><tr id="row1">
+  <td id="seat1" onclick="showUser(&quot;1&quot;)"   data-container="body" data-tooltip="tooltip" class="seat" data-toggle="modal" data-target="#seatInfo">1</td>
+  <td id="seat2" onclick="showUser(&quot;2&quot;)"   data-container="body" data-tooltip="tooltip" class="seat" data-toggle="modal" data-target="#seatInfo">2</td>
+  <td id="seat3" onclick="showUser(&quot;3&quot;)"   data-container="body" data-tooltip="tooltip" class="seat" data-toggle="modal" data-target="#seatInfo">3</td>
+  <td id="seat4" onclick="showUser(&quot;4&quot;)"   data-container="body" data-tooltip="tooltip" class="seat" data-toggle="modal" data-target="#seatInfo">4</td>
+  <td id="seat5" onclick="showUser(&quot;5&quot;)"   data-container="body" data-tooltip="tooltip" class="seat" data-toggle="modal" data-target="#seatInfo">5</td>
+  <td id="seat6" onclick="showUser(&quot;6&quot;)"   data-container="body" data-tooltip="tooltip" class="seat" data-toggle="modal" data-target="#seatInfo">6</td>
+  <td id="seat7" onclick="showUser(&quot;7&quot;)"   data-container="body" data-tooltip="tooltip" class="seat" data-toggle="modal" data-target="#seatInfo">7</td>
+  <td id="seat8" onclick="showUser(&quot;8&quot;)"   data-container="body" data-tooltip="tooltip" class="seat" data-toggle="modal" data-target="#seatInfo">8</td>
+  <td id="seat9" onclick="showUser(&quot;9&quot;)"   data-container="body" data-tooltip="tooltip" class="seat" data-toggle="modal" data-target="#seatInfo">9</td>
+  <td id="seat10" onclick="showUser(&quot;10&quot;)" data-container="body" data-tooltip="tooltip" class="seat" data-toggle="modal" data-target="#seatInfo">10</td></tr></table>
+<table><tr id="row2">
+  <td id="seat11" onclick="showUser(&quot;11&quot;)" data-container="body" data-tooltip="tooltip" class="seat" data-toggle="modal" data-target="#seatInfo">11</td>
+  <td id="seat12" onclick="showUser(&quot;12&quot;)" data-container="body" data-tooltip="tooltip" class="seat" data-toggle="modal" data-target="#seatInfo">12</td>
+  <td id="seat13" onclick="showUser(&quot;13&quot;)" data-container="body" data-tooltip="tooltip" class="seat" data-toggle="modal" data-target="#seatInfo">13</td>
+  <td id="seat14" onclick="showUser(&quot;14&quot;)" data-container="body" data-tooltip="tooltip" class="seat" data-toggle="modal" data-target="#seatInfo">14</td>
+  <td id="seat15" onclick="showUser(&quot;15&quot;)" data-container="body" data-tooltip="tooltip" class="seat" data-toggle="modal" data-target="#seatInfo">15</td>
+  <td id="seat16" onclick="showUser(&quot;16&quot;)" data-container="body" data-tooltip="tooltip" class="seat" data-toggle="modal" data-target="#seatInfo">16</td>
+  <td id="seat17" onclick="showUser(&quot;17&quot;)" data-container="body" data-tooltip="tooltip" class="seat" data-toggle="modal" data-target="#seatInfo">17</td>
+  <td id="seat18" onclick="showUser(&quot;18&quot;)" data-container="body" data-tooltip="tooltip" class="seat" data-toggle="modal" data-target="#seatInfo">18</td>
+  <td id="seat19" onclick="showUser(&quot;19&quot;)" data-container="body" data-tooltip="tooltip" class="seat" data-toggle="modal" data-target="#seatInfo">19</td>
+  <td id="seat20" onclick="showUser(&quot;20&quot;)" data-container="body" data-tooltip="tooltip" class="seat" data-toggle="modal" data-target="#seatInfo">20</td></tr></table>
+
+<table><tr id="row3">
+  <td id="seat21" onclick="showUser(&quot;21&quot;)" data-container="body" data-tooltip="tooltip" class="seat" data-toggle="modal" data-target="#seatInfo">21</td>
+  <td id="seat22" onclick="showUser(&quot;22&quot;)" data-container="body" data-tooltip="tooltip" class="seat" data-toggle="modal" data-target="#seatInfo">22</td>
+  <td id="seat23" onclick="showUser(&quot;23&quot;)" data-container="body" data-tooltip="tooltip" class="seat" data-toggle="modal" data-target="#seatInfo">23</td>
+  <td id="seat24" onclick="showUser(&quot;24&quot;)" data-container="body" data-tooltip="tooltip" class="seat" data-toggle="modal" data-target="#seatInfo">24</td>
+  <td id="seat25" onclick="showUser(&quot;25&quot;)" data-container="body" data-tooltip="tooltip" class="seat" data-toggle="modal" data-target="#seatInfo">25</td>
+  <td id="seat26" onclick="showUser(&quot;26&quot;)" data-container="body" data-tooltip="tooltip" class="seat" data-toggle="modal" data-target="#seatInfo">26</td>
+  <td id="seat27" onclick="showUser(&quot;27&quot;)" data-container="body" data-tooltip="tooltip" class="seat" data-toggle="modal" data-target="#seatInfo">27</td>
+  <td id="seat28" onclick="showUser(&quot;28&quot;)" data-container="body" data-tooltip="tooltip" class="seat" data-toggle="modal" data-target="#seatInfo">28</td>
+  <td id="seat29" onclick="showUser(&quot;29&quot;)" data-container="body" data-tooltip="tooltip" class="seat" data-toggle="modal" data-target="#seatInfo">29</td>
+  <td id="seat30" onclick="showUser(&quot;30&quot;)" data-container="body" data-tooltip="tooltip" class="seat" data-toggle="modal" data-target="#seatInfo">30</td></tr></table>
+<table><tr id="row4">
+  <td id="seat31" onclick="showUser(&quot;31&quot;)" data-container="body" data-tooltip="tooltip" class="seat" data-toggle="modal" data-target="#seatInfo">31</td>
+  <td id="seat32" onclick="showUser(&quot;32&quot;)" data-container="body" data-tooltip="tooltip" class="seat" data-toggle="modal" data-target="#seatInfo">32</td>
+  <td id="seat33" onclick="showUser(&quot;33&quot;)" data-container="body" data-tooltip="tooltip" class="seat" data-toggle="modal" data-target="#seatInfo">33</td>
+  <td id="seat34" onclick="showUser(&quot;34&quot;)" data-container="body" data-tooltip="tooltip" class="seat" data-toggle="modal" data-target="#seatInfo">34</td>
+  <td id="seat35" onclick="showUser(&quot;35&quot;)" data-container="body" data-tooltip="tooltip" class="seat" data-toggle="modal" data-target="#seatInfo">35</td>
+  <td id="seat36" onclick="showUser(&quot;36&quot;)" data-container="body" data-tooltip="tooltip" class="seat" data-toggle="modal" data-target="#seatInfo">36</td>
+  <td id="seat37" onclick="showUser(&quot;37&quot;)" data-container="body" data-tooltip="tooltip" class="seat" data-toggle="modal" data-target="#seatInfo">37</td>
+  <td id="seat38" onclick="showUser(&quot;38&quot;)" data-container="body" data-tooltip="tooltip" class="seat" data-toggle="modal" data-target="#seatInfo">38</td>
+  <td id="seat39" onclick="showUser(&quot;39&quot;)" data-container="body" data-tooltip="tooltip" class="seat" data-toggle="modal" data-target="#seatInfo">39</td>
+  <td id="seat40" onclick="showUser(&quot;40&quot;)" data-container="body" data-tooltip="tooltip" class="seat" data-toggle="modal" data-target="#seatInfo">40</td></tr></table>
+
+<table><tr id="row5">
+  <td id="seat41" onclick="showUser(&quot;41&quot;)" data-container="body" data-tooltip="tooltip" class="seat" data-toggle="modal" data-target="#seatInfo">41</td>
+  <td id="seat42" onclick="showUser(&quot;42&quot;)" data-container="body" data-tooltip="tooltip" class="seat" data-toggle="modal" data-target="#seatInfo">42</td>
+  <td id="seat43" onclick="showUser(&quot;43&quot;)" data-container="body" data-tooltip="tooltip" class="seat" data-toggle="modal" data-target="#seatInfo">43</td>
+  <td id="seat44" onclick="showUser(&quot;44&quot;)" data-container="body" data-tooltip="tooltip" class="seat" data-toggle="modal" data-target="#seatInfo">44</td>
+  <td id="seat45" onclick="showUser(&quot;45&quot;)" data-container="body" data-tooltip="tooltip" class="seat" data-toggle="modal" data-target="#seatInfo">45</td>
+  <td id="seat46" onclick="showUser(&quot;46&quot;)" data-container="body" data-tooltip="tooltip" class="seat" data-toggle="modal" data-target="#seatInfo">46</td>
+  <td id="seat47" onclick="showUser(&quot;47&quot;)" data-container="body" data-tooltip="tooltip" class="seat" data-toggle="modal" data-target="#seatInfo">47</td>
+  <td id="seat48" onclick="showUser(&quot;48&quot;)" data-container="body" data-tooltip="tooltip" class="seat" data-toggle="modal" data-target="#seatInfo">48</td>
+  <td id="seat49" onclick="showUser(&quot;49&quot;)" data-container="body" data-tooltip="tooltip" class="seat" data-toggle="modal" data-target="#seatInfo">49</td>
+  <td id="seat50" onclick="showUser(&quot;50&quot;)" data-container="body" data-tooltip="tooltip" class="seat" data-toggle="modal" data-target="#seatInfo">50</td></tr></table>
+<table><tr id="row6">
+  <td id="seat51" onclick="showUser(&quot;51&quot;)" data-container="body" data-tooltip="tooltip" class="seat" data-toggle="modal" data-target="#seatInfo">51</td>
+  <td id="seat52" onclick="showUser(&quot;52&quot;)" data-container="body" data-tooltip="tooltip" class="seat" data-toggle="modal" data-target="#seatInfo">52</td>
+  <td id="seat53" onclick="showUser(&quot;53&quot;)" data-container="body" data-tooltip="tooltip" class="seat" data-toggle="modal" data-target="#seatInfo">53</td>
+  <td id="seat54" onclick="showUser(&quot;54&quot;)" data-container="body" data-tooltip="tooltip" class="seat" data-toggle="modal" data-target="#seatInfo">54</td>
+  <td id="seat55" onclick="showUser(&quot;55&quot;)" data-container="body" data-tooltip="tooltip" class="seat" data-toggle="modal" data-target="#seatInfo">55</td>
+  <td id="seat56" onclick="showUser(&quot;56&quot;)" data-container="body" data-tooltip="tooltip" class="seat" data-toggle="modal" data-target="#seatInfo">56</td>
+  <td id="seat57" onclick="showUser(&quot;57&quot;)" data-container="body" data-tooltip="tooltip" class="seat" data-toggle="modal" data-target="#seatInfo">57</td>
+  <td id="seat58" onclick="showUser(&quot;58&quot;)" data-container="body" data-tooltip="tooltip" class="seat" data-toggle="modal" data-target="#seatInfo">58</td>
+  <td id="seat59" onclick="showUser(&quot;59&quot;)" data-container="body" data-tooltip="tooltip" class="seat" data-toggle="modal" data-target="#seatInfo">59</td>
+  <td id="seat60" onclick="showUser(&quot;60&quot;)" data-container="body" data-tooltip="tooltip" class="seat" data-toggle="modal" data-target="#seatInfo">60</td></tr></table>
+
+<table><tr id="row7">
+  <td id="seat61" onclick="showUser(&quot;61&quot;)" data-container="body" data-tooltip="tooltip" class="seat" data-toggle="modal" data-target="#seatInfo">61</td>
+  <td id="seat62" onclick="showUser(&quot;62&quot;)" data-container="body" data-tooltip="tooltip" class="seat" data-toggle="modal" data-target="#seatInfo">62</td>
+  <td id="seat63" onclick="showUser(&quot;63&quot;)" data-container="body" data-tooltip="tooltip" class="seat" data-toggle="modal" data-target="#seatInfo">63</td>
+  <td id="seat64" onclick="showUser(&quot;64&quot;)" data-container="body" data-tooltip="tooltip" class="seat" data-toggle="modal" data-target="#seatInfo">64</td>
+  <td id="seat65" onclick="showUser(&quot;65&quot;)" data-container="body" data-tooltip="tooltip" class="seat" data-toggle="modal" data-target="#seatInfo">65</td>
+  <td id="seat66" onclick="showUser(&quot;66&quot;)" data-container="body" data-tooltip="tooltip" class="seat" data-toggle="modal" data-target="#seatInfo">66</td>
+  <td id="seat67" onclick="showUser(&quot;67&quot;)" data-container="body" data-tooltip="tooltip" class="seat" data-toggle="modal" data-target="#seatInfo">67</td>
+  <td id="seat68" onclick="showUser(&quot;68&quot;)" data-container="body" data-tooltip="tooltip" class="seat" data-toggle="modal" data-target="#seatInfo">68</td>
+  <td id="seat69" onclick="showUser(&quot;69&quot;)" data-container="body" data-tooltip="tooltip" class="seat" data-toggle="modal" data-target="#seatInfo">69</td>
+  <td id="seat70" onclick="showUser(&quot;70&quot;)" data-container="body" data-tooltip="tooltip" class="seat" data-toggle="modal" data-target="#seatInfo">70</td></tr></table>
+  <table><tr id="row8">
+    <td id="seat71" onclick="showUser(&quot;71&quot;)" data-container="body" data-tooltip="tooltip" class="seat" data-toggle="modal" data-target="#seatInfo" >71</td>
+    <td id="seat72" onclick="showUser(&quot;72&quot;)" data-container="body" data-tooltip="tooltip" class="seat" data-toggle="modal" data-target="#seatInfo" >72</td>
+    <td id="seat73" onclick="showUser(&quot;73&quot;)" data-container="body" data-tooltip="tooltip" class="seat" data-toggle="modal" data-target="#seatInfo" >73</td>
+    <td id="seat74" onclick="showUser(&quot;74&quot;)" data-container="body" data-tooltip="tooltip" class="seat" data-toggle="modal" data-target="#seatInfo" >74</td>
+    <td id="seat75" onclick="showUser(&quot;75&quot;)" data-container="body" data-tooltip="tooltip" class="seat" data-toggle="modal" data-target="#seatInfo" >75</td>
+    <td id="seat76" onclick="showUser(&quot;76&quot;)" data-container="body" data-tooltip="tooltip" class="seat" data-toggle="modal" data-target="#seatInfo" >76</td>
+    <td id="seat77" onclick="showUser(&quot;77&quot;)" data-container="body" data-tooltip="tooltip" class="seat" data-toggle="modal" data-target="#seatInfo" >77</td>
+    <td id="seat78" onclick="showUser(&quot;78&quot;)" data-container="body" data-tooltip="tooltip" class="seat" data-toggle="modal" data-target="#seatInfo" >78</td>
+    <td id="seat79" onclick="showUser(&quot;79&quot;)" data-container="body" data-tooltip="tooltip" class="seat" data-toggle="modal" data-target="#seatInfo" >79</td>
+    <td id="seat80" onclick="showUser(&quot;80&quot;)" data-container="body" data-tooltip="tooltip" class="seat" data-toggle="modal" data-target="#seatInfo" >80</td></tr></table>
+  <table><tr id="crewLeft">
+    <td id="seat81" onclick="showUser(&quot;81&quot;)" data-container="body" data-tooltip="tooltip" class="seat" data-toggle="modal" data-target="#seatInfo">81</td>
+    <td id="seat82" onclick="showUser(&quot;82&quot;)" data-container="body" data-tooltip="tooltip" class="seat" data-toggle="modal" data-target="#seatInfo">82</td>
+    <td id="seat83" onclick="showUser(&quot;83&quot;)" data-container="body" data-tooltip="tooltip" class="seat" data-toggle="modal" data-target="#seatInfo">83</td>
+    <td id="seat84" onclick="showUser(&quot;84&quot;)" data-container="body" data-tooltip="tooltip" class="seat" data-toggle="modal" data-target="#seatInfo">84</td>
+    <td id="seat85" onclick="showUser(&quot;85&quot;)" data-container="body" data-tooltip="tooltip" class="seat" data-toggle="modal" data-target="#seatInfo">85</td>
+    <td id="seat86" onclick="showUser(&quot;86&quot;)" data-container="body" data-tooltip="tooltip" class="seat" data-toggle="modal" data-target="#seatInfo">86</td>
+    <td id="seat87" onclick="showUser(&quot;87&quot;)" data-container="body" data-tooltip="tooltip" class="seat" data-toggle="modal" data-target="#seatInfo">87</td>
+    <td id="seat88" onclick="showUser(&quot;88&quot;)" data-container="body" data-tooltip="tooltip" class="seat" data-toggle="modal" data-target="#seatInfo">88</td></tr></table>
+  <table><tr id="crewRight">
+    <td id="seat89" onclick="showUser(&quot;89&quot;)" data-container="body" data-tooltip="tooltip" class="seat" data-toggle="modal" data-target="#seatInfo">89</td>
+    <td id="seat90" onclick="showUser(&quot;90&quot;)" data-container="body" data-tooltip="tooltip" class="seat" data-toggle="modal" data-target="#seatInfo">90</td>
+    <td id="seat91" onclick="showUser(&quot;91&quot;)" data-container="body" data-tooltip="tooltip" class="seat" data-toggle="modal" data-target="#seatInfo">91</td>
+    <td id="seat92" onclick="showUser(&quot;92&quot;)" data-container="body" data-tooltip="tooltip" class="seat" data-toggle="modal" data-target="#seatInfo">92</td>
+    <td id="seat93" onclick="showUser(&quot;93&quot;)" data-container="body" data-tooltip="tooltip" class="seat" data-toggle="modal" data-target="#seatInfo">93</td>
+    <td id="seat94" onclick="showUser(&quot;94&quot;)" data-container="body" data-tooltip="tooltip" class="seat" data-toggle="modal" data-target="#seatInfo">94</td>
+    <td id="seat95" onclick="showUser(&quot;95&quot;)" data-container="body" data-tooltip="tooltip" class="seat" data-toggle="modal" data-target="#seatInfo">95</td>
+    <td id="seat96" onclick="showUser(&quot;96&quot;)" data-container="body" data-tooltip="tooltip" class="seat" data-toggle="modal" data-target="#seatInfo">96</td></tr></table>
+<p id="inngang2">Back entrance, toilet</p>
+<p id="bib">Library</p>
+<p id="inngang">Main entrance</p>
+</div>
+<p style="margin-bottom:70%;"></p>
+
+<!-- Modal
+<div id="seatInfo" class="modal fade" role="dialog">
+  <div class="modal-dialog modal-xl">
+
+    Modal content
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">Seat info</h4>
+      </div>
+      <div class="modal-body" id="txtHint">
+          <p>Loading ...</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+</div>
+</div> -->
+</div>
+<div id="minside0">
+  </div>
+<div id="nickname0">
+  </div>
+<div id="city0">
+  </div>
+<div id="password0">
+  </div>
+<div id="ansvar0">
+  </div>
+<div id="login0">
+  <div id="login-form" style="margin-right:30px">
+<form id="login-form000">
+
+<div class="form-group">
+  <h2 id="loginText">Sign in</h2>
+</div>
+
+<div class="form-group">
+  <hr class="loginHR">
+</div>
+
+
+<div class="form-group">
+ <div id="email" class="input-group">
+    <input type="email" name="email" class="form-control" placeholder="Email" value="" maxlength="40" disabled>
+  </div>
+    <span class="text-danger marginIDK"></span>
+</div>
+<div class="form-group">
+  <div id="password1" class="input-group">
+    <input type="password" name="pass" class="form-control" placeholder="Password" maxlength="40" disabled>
+  </div>
+  <span class="text-danger marginIDK"></span>
+</div>
+
+<div class="form-group">
+ <hr class="loginHR">
+</div>
+
+<div class="form-group">
+ <button id="login" type="submit" class="btn btn-block btn-danger" name="btn-login" disabled>Sign in</button>
+</div>
+
+</form>
+</div>
+</div>
+<div id="register0">
+  <div id="login-form" style="margin-right:30px">
+   <form>
+   <fieldset>
+    <div class="col-md-12">
+
+        <div class="form-group">
+            <h2 style="text-align:center;">Sign up</h2>
+           </div>
+
+        <div class="form-group">
+            <hr class="loginHR">
+           </div>
+
+
+           <div class="form-group">
+            <div class="input-group form000">
+            <input type="text" name="name" class="form-control" placeholder="Full name" maxlength="50" value="" disabled>
+               </div>
+               <span class="text-danger"></span>
+           </div>
+
+
+           <div class="form-group">
+            <div class="input-group form000">
+            <input type="email" name="email" class="form-control" placeholder="Email" maxlength="40" value="" disabled>
+               </div>
+               <span class="text-danger"></span>
+           </div>
+
+
+           <div class="form-group">
+            <div class="input-group form000">
+            <input type="password" id="password" name="pass" class="form-control required" placeholder="Password" maxlength="15" disabled>
+               </div>
+               <span class="text-danger"></span>
+           </div>
+
+
+           <div class="form-group">
+            <div class="input-group form000">
+            <input type="password" id="passwordConfirm" name="passConfirm" class="form-control" placeholder="Confirm password" maxlength="15" disabled>
+               </div>
+               <span class="text-danger"></span>
+           </div>
+
+
+           <div class="form-group">
+            <div class="input-group form000">
+            <input type="text" name="nick" class="form-control" placeholder="Nickname (Optional)" maxlength="40" value="" disabled>
+               </div>
+               <span class="text-danger"></span>
+           </div>
+
+
+           <div class="form-group">
+            <div class="input-group form000">
+            <input type="text" name="city" class="form-control" placeholder="Location (Optional)" maxlength="30" value="" disabled>
+               </div>
+               <span class="text-danger"></span>
+           </div>
+
+
+           <div class="form-group">
+            <hr class="loginHR">
+           </div>
+
+           <div class="form-group form000">
+            <button type="submit" class="btn btn-block btn-danger" name="btn-signup" disabled>Sign up</button>
+           </div>
+
+       </div>
+   </fieldset>
+   </form>
+</div>
+</div>
+</div>
+<div class="container" id="footer">
+<hr id="footerHR">
+<p id="footerP">Developed by <a href="http://leanderchristensen.com" target="_blank">Leander Christensen</a></p>
+</div>
+</body>
+</html>

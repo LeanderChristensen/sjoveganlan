@@ -7,7 +7,7 @@ The demo is static (no php) and doesn't 100% reflect the 2016/17 look and behavi
 
 # About
 
-This was one of the first websites I ever made, and I couldn't have imagined a better first project for learning than this! In retrospect I see that the website wasn't the best looking, but look at the feature list below; it's amazing what I achieved with no experience. Also the launch of the website was without problems, even though hundreds of people visited it.
+This was one of the first websites I ever made, and I couldn't have imagined a better first project for learning than this. In retrospect I see that the website wasn't the best looking, but look at the feature list below; it's amazing what I achieved with no experience. Also the launch of the website was without problems, even though hundreds of people visited it.
 
 # Features
 - Authentication

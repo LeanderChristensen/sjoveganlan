@@ -1,7 +1,7 @@
 # sjoveganlan
 A website I made in 2016/17 for the LAN party my class was hosting for our school
 
-Demo link: https://leander.cx/lan/
+Demo link: https://l-c.io/lan
 
 The demo is static (no php) and doesn't 100% reflect the 2016/17 look and behavior.
 

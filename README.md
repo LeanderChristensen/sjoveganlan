@@ -1,7 +1,7 @@
 # sjoveganlan
 A website I made in 2016/17 for the LAN party my class was hosting for our school
 
-Demo link: https://l-c.io/lan
+Demo link: [l-c.io/lan](https://l-c.io/lan)
 
 The demo is static (no php) and doesn't 100% reflect the 2016/17 look and behavior.
 
@@ -18,3 +18,5 @@ This was one of the first websites I ever made, and I couldn't have imagined a b
   - When users click on a taken seat, a window pops up that shows the profile of the user
 - Crew page where those attending can see the staff so they know who to contact
 - Hidden page for crew where they can edit some extra stuff regarding their profile and view a list of every registered user
+
+![sjoveganlan preview](https://i.imgur.com/UZqwhi5.png)
